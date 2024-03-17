@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--Dark-Slate-Grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sub-container {
+    height: 90%;
+    width: 65%;
+    padding: 20px 20px 20px 30px;
+    background-color: var(--White);
+    border-radius: 25px;
+    display: flex;
+    gap: 45px;
+}
+
+figure {
+    height: 100%;
+    width: 50%;
+}
+
+aside {
+    height: 100%;
+    width: 50%;
+    padding: 5px;
+    color: var(--Dark-Slate-Grey);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#signup-img-desktop {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+#signup-img-mobile {
+    display: none;
+}
+
+aside h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+aside ul {
+    margin: 25px 0 20px 0px;
+    list-style-type: none;
+}
+
+aside ul li {
+    padding-left: 30px;
+    margin-bottom: 10px;
+    background-image: url('./assets/images/icon-list.svg');
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: left center;
+}
+
+aside form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+aside form label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+aside form input {
+    padding: 15px 20px;
+    border: 1px solid var(--Grey);
+    border-radius: 5px;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+aside form button {
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--White);
+    background-color: var(--Charcoal-Grey);
+    border-style: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+aside form input:focus {
+    outline: 0;
+}
+
+aside form button:hover {
+    background: linear-gradient(95deg, rgba(255, 90, 104, 1) 0%, rgba(255, 164, 90, 1) 100%);
+    box-shadow: rgba(255, 90, 104, 0.25) 0px 14px 28px, rgba(255, 164, 90, 0.25) 0px 10px 10px;
+}
+
+aside form button:active {
+    background: linear-gradient(95deg, rgba(255, 95, 104, 0.75) 0%, rgba(255, 164, 90, 0.75) 100%);
+}
+
+#email-label span {
+    color: red;
+    float: right;
+    margin-right: 10px;
+}
+
+@media (max-height: 500px) {
+    main {
+        min-height: 550px;
+    }
+
+    aside h1 {
+        font-size: 42px;
+        border-bottom: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+
+    #sub-container {
+        height: 100%;
+        width: 100%;
+        padding: 0px;
+        border-radius: 0px;
+        flex-direction: column-reverse;
+        gap: 0px;
+    }
+
+    figure {
+        width: 100%;
+    }
+
+    #signup-img-mobile {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #signup-img-desktop {
+        display: none;
+    }
+
+    aside {
+        width: 100%;
+        padding: 25px;
+        justify-content: flex-start;
+    }
+
+    aside h1 {
+        margin-bottom: 30px;
+    }
+
+    aside ul {
+        margin: 30px 0px 35px 0px;
+    }
+
+    aside ul li {
+        margin-bottom: 15px;
+        padding-left: 35px;
+    }
+
+    aside form button {
+        font-size: 16px;
+    }
+}

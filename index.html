@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Newsletter Subscribe Page</title>
+
+  <link rel="stylesheet" href="index-style.css">
+
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" > </script>
+   <script type="text/javascript">
+     (function() {
+     emailjs.init("s3TnvjPnTT9SBq7ex");
+     })(); 
+    </script>
+
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+  <main>
+    <section id="sub-container">
+
+      <aside>
+        <h1>Stay Updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+
+        <form action="" id="form">
+          <label for="email" id="email-label">Email address <span id="error"></span></label>
+          <input type="text" name="email" id="email" placeholder="email@company.com">
+          <button type="submit" id="submit-btn">Subscribe to monthly newsletter</button>
+        </form>
+      </aside>
+
+      <figure>
+        <img src="./assets/images/illustration-sign-up-desktop.svg" alt="sign-up-illustration" id="signup-img-desktop">
+        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="sign-up-illustration" id="signup-img-mobile">
+      </figure>
+
+    </section>
+  </main>
+
+</body>
+
+</html>

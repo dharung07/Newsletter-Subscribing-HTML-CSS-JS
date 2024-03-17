@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanks for subscribing</title>
+
+    <link rel="stylesheet" href="success-style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <div id="thankyou-box">
+            <img src="./assets/images/icon-success.svg" alt="succes-icon">
+            <h1>Thanks for subscribing!</h1>
+            <p>A confirmation email has been sent to <span id="user-email"></span>. Please open it and click the button
+                inside to confirm your subscription.</p>
+            <button id="dismiss-btn">Dismiss message</button>
+        </div>
+        </div>
+
+    </main>
+
+    <script>
+        const userEmail = document.getElementById('user-email');
+        const dismissBtn = document.getElementById('dismiss-btn');
+
+        const storedUserEmail = localStorage.getItem("toEmail");
+        userEmail.innerHTML = storedUserEmail;
+
+        dismissBtn.addEventListener('click', goHomePage);
+
+        function goHomePage() {
+            const emailSent = localStorage.getItem("emailSent");
+            if (emailSent === "true") {
+                localStorage.removeItem("emailSent");
+            } else {
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

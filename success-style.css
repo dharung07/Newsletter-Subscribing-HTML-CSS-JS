@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--Charcoal-Grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#thankyou-box {
+    height: auto;
+    width: 400px;
+    padding: 30px;
+    background-color: var(--White);
+    border-radius: 25px;
+}
+
+#thankyou-box h1 {
+    font-size: 48px;
+    color: var(--Dark-Slate-Grey);
+    line-height: 1;
+    padding: 20px 0px;
+}
+
+#thankyou-box p span {
+    font-weight: bold;
+}
+
+#thankyou-box button {
+    margin: 35px 0px 20px 0px;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--White);
+    background-color: var(--Charcoal-Grey);
+    border-style: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#thankyou-box button:hover {
+    background: linear-gradient(95deg, rgba(255, 90, 104, 1) 0%, rgba(255, 164, 90, 1) 100%);
+    box-shadow: rgba(255, 90, 104, 0.25) 0px 14px 28px, rgba(255, 164, 90, 0.25) 0px 10px 10px;
+}
+
+@media (max-width: 500px) {
+    body {
+        font-size: 18px;
+    }
+
+    main {
+        padding: 30% 5%;
+        background-color: var(--White);
+    }
+
+    #thankyou-box {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    #thankyou-box h1 {
+        font-size: 42px;
+        line-height: 1.1;
+    }
+
+    #thankyou-box p {
+        line-height: 1.5;
+    }
+
+    #thankyou-box button {
+        font-size: 18px;
+        padding: 20px 30px;
+        margin-top: 100%;
+    }
+}
